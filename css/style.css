@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/* @import url(reset.css); -> css에서 reset.css 연결방법 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+/* font-family: 'Hana2.0 B'; 
+font-family: 'Noto Sans KR', sans-serif; */
+
+
+/* 💙전체 레이아웃 */
+#wrap {}
+#header {}
+#banner {background-color: #a0d1ee; height: 470px;}
+
+/* 💙중심영역 */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* clearfix */
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* 💛header */
+.header {font-family: 'Hana2.0 B';}
+.header ul {margin: 7px 0;}
+.header ul li {
+    float: left; /* 자식float, 부모float이면 클리어픽스 처리필요없음 */
+    background: url(../img/bar1.gif) no-repeat 0 9px;
+} 
+.header ul li a {
+    display: block;
+    padding: 8px 15px;
+}
+.header .list1 {float: left;}
+.header .list1 .green a {
+    background-color: #00907f;
+    color: #fff;
+    border-radius: 3px;
+}
+.header .list2 {float: right;}
+.header .list2 li:last-child a { padding-right: 0;}
+.header .list2 li.log {}
+.header .list2 li.log a {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 3px 10px;
+    margin: 5px 0; margin-right: 13px;
+}
+
+/* 💛banner */
+.ban_left {}
+.ban_right {
+    position: absolute;
+    right: 0; top: 50px;
+    width: 600px;
+}
+.ban_right .br_tit {
+    background-color: #fff;
+    padding: 45px 0 60px 100px;
+}
+.ban_right .br_tit h3 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: -1px;
+}
+.ban_right .br_tit p {
+    padding-top: 50px;
+    font-size: 14px;
+    position: relative;
+}
+.ban_right .br_tit p::before {
+    content: '';
+    position: absolute;
+    top: 24px; left: 0;
+    width: 30px; height: 2px;
+    background-color: #00907f;
+}
+.ban_right .br_tit p strong {
+    color: #00907f;
+}
+.ban_right .br_tit .login_btn {
+    position: absolute;
+    right: 0; top: 0;
+}
+.ban_right .br_tit .login_btn ul {}
+.ban_right .br_tit .login_btn ul li {
+    margin-bottom: 1px;
+}
+.ban_right .br_tit .login_btn ul li a {
+    background-color: #ccc;
+    width: 80px; height: 80px;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+.ban_right .br_tit .login_btn ul li.lb1 a {
+    background: #db3360 url(../img/ico_login.png) no-repeat center 18px;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+.ban_right .br_tit .login_btn ul li.lb2 a {}
