@@ -10,6 +10,13 @@ font-family: 'Noto Sans KR', sans-serif; */
 #wrap {}
 #header {}
 #banner {background-color: #a0d1ee; height: 470px;}
+#contents {}
+
+
+/* contents layout */
+#cont1 {height: 940px; background-color: #f5f6f8;}
+
+
 
 /* 💙중심영역 */
 .container {
@@ -24,6 +31,7 @@ font-family: 'Noto Sans KR', sans-serif; */
     display: block;
     clear: both;
 }
+
 
 
 /* 💛header */
@@ -54,7 +62,143 @@ font-family: 'Noto Sans KR', sans-serif; */
 }
 
 /* 💛banner */
-.ban_left {}
+.ban_left {position: relative;}
+.ban_left .ob {
+    position: absolute;
+}
+.ban_left .ob.ob1 { /* 구름1 */
+    top: 161px; left: 151px;
+}
+.ban_left .ob.ob2 { /* 구름2 */
+    top: 217px; left: 133px;
+}
+.ban_left .ob.ob3 { /* 달력 */
+    top: 78px; left: 208px;
+}
+.ban_left .ob.ob3-1 { /* 쇼핑할땐 */
+    top: 115px; left: 290px;
+}
+.ban_left .ob.ob3-2 { /* 타이틀 */
+    top: 140px; left: 268px;
+}
+.ban_left .ob.ob3-3 { /* 1 */
+    top: 205px; left: 268px;
+}
+.ban_left .ob.ob3-4 { /* 1 */
+    top: 205px; left: 320px;
+}
+.ban_left .ob.ob4 { /* 우산 */
+    top: 260px; left: 480px;
+}
+.ban_left .ob.ob5 { /* 슈트케이스 */
+    top: 256px; left: 360px;
+}
+.ban_left .ob.ob6 { /* 자동차 */
+    top: 285px; left: 225px;
+}
+.ban_left .ob.ob7 { /* 선물 */
+    top: 198px; left: 373px;
+}
+.ban_left .ob.ob8 { /* 박스 */
+    top: 225px; left: 375px;
+}
+.ban_left .ob.ob9 { /* 서류가방 */
+    top: 211px; left: 400px;
+}
+.ban_left .ob.ob10 { /* 바람1 */
+    top: 220px; left: 490px;
+}
+.ban_left .ob.ob11 { /* 바람2 */
+    top: 220px; left: 490px;
+}
+
+.ban_left .ob.ob1 { /* 구름1 */
+    animation: guleom 3s 0.3s linear infinite both;
+}
+.ban_left .ob.ob2 { /* 구름2 */
+    animation: guleom 3s 0.6s linear infinite both;
+}
+.ban_left .ob.ob3 { /* 달력 */
+    animation: dalryeock 0.5s 0.5s both;
+}
+.ban_left .ob.ob3-1 { /* 쇼핑할땐 */
+    animation: toLeft 0.5s 0.7s both ;
+}
+.ban_left .ob.ob3-2 { /* 타이틀 */
+    animation: toLeft 0.5s 0.9s both ;
+}
+.ban_left .ob.ob3-3 { /* 1 */
+    animation: bToBottom 0.5s 0.7s both ;
+}
+.ban_left .ob.ob3-4 { /* 1 */
+    animation: bToBottom 0.5s 0.9s both ;
+}
+.ban_left .ob.ob4 { /* 우산 */
+    animation: umbllela 0.3s 2.8s both;
+}
+.ban_left .ob.ob5 { /* 슈트케이스 */
+    animation: item 0.3s 2.5s both;
+}
+.ban_left .ob.ob6 { /* 자동차 */
+    animation: car 0.6s 1.8s both;
+}
+.ban_left .ob.ob7 { /* 선물 */
+    animation: item 0.3s 2.9s both;
+}
+.ban_left .ob.ob8 { /* 박스 */
+    animation: item 0.3s 2.7s both;
+}
+.ban_left .ob.ob9 { /* 서류가방 */
+    animation: item 0.3s 3.1s both;
+}
+.ban_left .ob.ob10 { /* 바람1 */
+    animation: wind 2s 3.4s both linear infinite; /* linear 일정한 시간 */
+    transform-origin: left top; /* 애니메이션 방향 설정 */
+}
+.ban_left .ob.ob11 { /* 바람2 */
+    animation: wind 2s 3.3s both linear infinite;
+    transform-origin: left top;
+}
+
+@keyframes guleom {
+    0% {transform: translateX(-10px);}
+    20% {transform: translateX(0px);}
+    50% {transform: translateX(10px);}
+    75% {transform: translateX(0px);}
+    100% {transform: translateX(-10px);}
+}
+@keyframes dalryeock {
+    0% {transform: translateY(-300px); opacity: 0;}
+    100% {transform: translateY(0px); opacity: 1;}
+}
+@keyframes toLeft {
+    0% {transform: translateX(500px); opacity: 0;}
+    100% {transform: translateX(0px); opacity: 1;}
+}
+@keyframes bToBottom {
+    0% {transform: translateY(-500px); opacity: 0;}
+    70% {transform: translateY(30px); opacity: 1;}
+    100% {transform: translateY(0px); opacity: 1;}
+}
+@keyframes umbllela {
+    0% {transform: translate(110px, -100px);opacity: 0;}
+    100% {transform: translate(0px, 0px);opacity: 1;}
+}
+@keyframes car {
+    0% {transform: translateX(500px); opacity: 0;}
+    85% {transform: translateX(-180px); opacity: 1;}
+    100% {transform: translateX(0px); opacity: 1;}
+}
+@keyframes item {
+    0% {transform: translateY(-100px); opacity: 0;}
+    100% {transform: translateY(0px); opacity: 1;}
+}
+@keyframes wind {
+    0% {transform: scale(0); opacity: 0;}
+    20% {transform: scale(1); opacity: 1;}
+    100% {transform: scale(1); opacity: 1;}
+}
+
 .ban_right {
     position: absolute;
     right: 0; top: 50px;
@@ -62,7 +206,7 @@ font-family: 'Noto Sans KR', sans-serif; */
 }
 .ban_right .br_tit {
     background-color: #fff;
-    padding: 45px 0 60px 100px;
+    padding: 45px 0 37px 100px;
 }
 .ban_right .br_tit h3 {
     font-size: 36px;
@@ -87,7 +231,7 @@ font-family: 'Noto Sans KR', sans-serif; */
 }
 .ban_right .br_tit .login_btn {
     position: absolute;
-    right: 0; top: 0;
+    right: 60px; top: 55px
 }
 .ban_right .br_tit .login_btn ul {}
 .ban_right .br_tit .login_btn ul li {
@@ -105,5 +249,133 @@ font-family: 'Noto Sans KR', sans-serif; */
     background: #db3360 url(../img/ico_login.png) no-repeat center 18px;
     padding-top: 50px;
     box-sizing: border-box;
+    transition: 0.3s; /* .3s 로 작성가능 */
 }
-.ban_right .br_tit .login_btn ul li.lb2 a {}
+.ban_right .br_tit .login_btn ul li.lb1 a:hover {
+    background-color: #c4204c;
+}
+.ban_right .br_tit .login_btn ul li.lb2 a {
+    background-color: #3c3f44;
+    line-height: 80px;
+    transition: .3s;
+}
+.ban_right .br_tit .login_btn ul li.lb2 a:hover {
+    background-color: #333;
+}
+
+.ban_right .br_btn {
+    background-color: #00907f;
+    height: 50px;
+    margin-top: 25px;
+}
+.ban_right .br_btn ul {overflow: hidden;}
+.ban_right .br_btn ul li {
+    float: left;
+    width: 25%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 50px;
+    position: relative;
+}
+.ban_right .br_btn ul li::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 20px; left: 0;
+    width: 1px; height: 14px;
+    background-color: #62bdb1;
+}
+.ban_right .br_btn ul li:first-child:after {
+    width: 0; height: 0;
+}
+.ban_right .br_btn ul li a {
+    color: #fff;
+}
+
+/* 💛.contents */
+#nav {
+    font-family: 'Hana2.0 B'; 
+    background-color: #fff;
+    padding: 30px 0;
+    border-bottom: 1px solid #e6e6e6;
+    position: absolute;
+    top: -50px; left: 0;
+    width: 100%; 
+    /* position: absolute하는순간 자식넓이값만큼 적용되므로, w100% 작성해서 부모값 따르도록! */
+}
+#nav .gnb {
+    padding-left: 60px;
+}
+#nav .gnb li {
+    display: inline;
+    padding: 10px;
+}
+#nav .gnb li a {
+    display: inline-block;
+    /* ❗ 부모가 인라인일때 자식inline-block 적용해야 옆으로 정렬+패딩적용됨 */
+    padding: 10px 16px;
+    font-size: 17px;
+    transition: 0.3s;
+}
+#nav .gnb li a:hover{
+    background-color: #00907f;
+    color: #fff;
+    border-radius: 3px;
+}
+
+#nav .gnb_right {
+    position: absolute;
+    top: 30px; right: 50px;
+}
+#nav .gnb_right li {
+    float: left; /* 부모 position: absolute 때문에 안깨짐*/
+}
+#nav .gnb_right li a {
+    display: block;
+    padding: 11px 20px;
+    font-size: 14px;
+}
+#nav .gnb_right .gr1 {
+    margin-right: 10px;
+}
+#nav .gnb_right .gr1 a {
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+#nav .gnb_right .gr1 a:hover {
+    background-color: #f4f4f4;
+    color: black;
+}
+#nav .gnb_right .gr2 {}
+#nav .gnb_right .gr2 a {
+    background-color: #404b57;
+    color: #fff;
+    border-radius: 3px;
+    transition: 0.3s;
+    border: 1px solid #404b57;
+}
+#nav .gnb_right .gr2 a:hover {
+    background-color: black;
+    border-color: black;
+}
+
+#nav .gnb_search {
+    width: 50px; height: 50px;
+    position: absolute;
+    top: 25px; right: 290px;
+    background: url(../img/gnb_search.png);
+}
+#nav .gnb_event {
+    position: absolute;
+    top: -35px; left: 25px;
+    background-color: #3c3f44;
+    color: #fff;
+    text-transform: uppercase; /* 대문자로 변경 */
+    font-size: 14px;
+    padding: 3px 23px 2px;
+    line-height: 30px;
+}
+#nav .gnb_event i {
+    padding-left: 1px;
+}

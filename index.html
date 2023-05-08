@@ -47,6 +47,17 @@
 
     <!-- 하나폰트 연결하기 -->
     <link rel="stylesheet" href="css/fonts/stylesheet.css">
+
+    <!-- ✔ html5태그는 구ie(IE6,IE7,IE8버전)에서는 인식하지 못하기때문에 자바스크립트를 사용하여 html5버전 태그를 인식할 수 있도록 html5shiv를 설정한다. -->
+    <!--  ↓조건부 주석문 -->
+    <!--[if lt IE 7]>
+        <script>
+            alert("Please Upgrade Your BROWSER!")
+        </script>
+        <![endif]-->
+    <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]
+     -->
+    
 </head>
 
 <body>
@@ -72,7 +83,53 @@
         <div id="banner">
             <div class="container">
                 <div class="ban_left">
-                    나중에 작업
+                    <div class="obj">
+                        <p class="ob ob1">
+                            <img src="img/ev49_obj_01.png" alt="구름1">
+                        </p>
+                        <p class="ob ob2">
+                            <img src="img/ev49_obj_02.png" alt="작은구름2">
+                        </p>
+                        <p class="ob ob3">
+                            <img src="img/ev49_obj_03.png" alt="달력">
+                        </p>
+                        <p class="ob ob3-1">
+                            <img src="img/ev43_obj_02.png" alt="온라인 쇼핑할땐">
+                        </p>
+                        <p class="ob ob3-2">
+                            <img src="img/ev43_obj_03.png" alt="타이틀">
+                        </p>
+                        <p class="ob ob3-3">
+                            <img src="img/ev43_obj_04.png" alt="1">
+                        </p>
+                        <p class="ob ob3-4">
+                            <img src="img/ev43_obj_04.png" alt="1">
+                        </p>
+                        <p class="ob ob4">
+                            <img src="img/ev49_obj_04.png" alt="우산">
+                        </p>
+                        <p class="ob ob5">
+                            <img src="img/ev49_obj_05.png" alt="슈트케이스">
+                        </p>
+                        <p class="ob ob6">
+                            <img src="img/ev49_obj_06.png" alt="자동차">
+                        </p>
+                        <p class="ob ob7">
+                            <img src="img/ev49_obj_07.png" alt="선물">
+                        </p>
+                        <p class="ob ob8">
+                            <img src="img/ev49_obj_08.png" alt="박스">
+                        </p>
+                        <p class="ob ob9">
+                            <img src="img/ev49_obj_09.png" alt="서류가방">
+                        </p>
+                        <p class="ob ob10">
+                            <img src="img/ev49_obj_10.png" alt="바람1">
+                        </p>
+                        <p class="ob ob11">
+                            <img src="img/ev49_obj_11.png" alt="바람2">
+                        </p>
+                    </div> <!-- .obj end -->
                 </div> <!-- .ban_left end -->
                 <div class="ban_right">
                     <div class="br_tit">
@@ -85,9 +142,46 @@
                             </ul>
                         </div> <!-- .login_btn end -->
                     </div> <!-- .br_tit end -->
+
+                    <div class="br_btn">
+                        <ul>
+                            <li><a href="#">이용대금명세서</a></li>
+                            <li><a href="#">결제예정금액</a></li>
+                            <li><a href="#">카드이용내역</a></li>
+                            <li><a href="#">한도상향</a></li>
+                        </ul>
+                    </div> <!-- .br_btn end -->
                 </div> <!-- .ban_right end -->
             </div> <!-- .container end -->
         </div> <!-- #banner end -->
+
+        <div id="contents">
+            <div id="cont1">
+                <div class="container">
+                    <div id="nav">
+                        <ul class="gnb"> <!-- gnb : 메인메뉴라고 통칭함 -->
+                            <li><a href="#">마이페이지</a></li>
+                            <li><a href="#">카드</a></li>
+                            <li><a href="#">금융</a></li>
+                            <li><a href="#">라이프</a></li>
+                            <li><a href="#">모바일</a></li>
+                            <li><a href="#">고객센터</a></li>
+                        </ul>
+                        <ul class="gnb_right">
+                            <li class="gr1"><a href="#">간편서비스</a></li>
+                            <li class="gr2"><a href="#">전체메뉴 <i class="fas fa-bars"></i></a></li>
+                        </ul> <!-- .gnb_right end -->
+                        <a href="#" class="gnb_search">
+                            <span class="ir">통합검색</span>
+                            <i class="ir">레이어팝업 열림</i>
+                        </a>
+                        <a href="#" class="gnb_event">
+                            Event<i class="fas fa-plus"></i>
+                        </a>
+                    </div> <!-- #nav end -->
+                </div> <!-- .container end -->
+            </div> <!-- #cont1 end -->
+        </div> <!-- #contents end -->
 
     </div> <!-- .container end -->
 
