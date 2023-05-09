@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hana-Card</title>
+    <!-- slick css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css"> <!-- html에서 reset.css 연결방법  -->
@@ -57,7 +59,7 @@
         <![endif]-->
     <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]
      -->
-    
+
 </head>
 
 <body>
@@ -129,6 +131,12 @@
                         <p class="ob ob11">
                             <img src="img/ev49_obj_11.png" alt="바람2">
                         </p>
+                        <p class="ob ob12">
+                            <img src="img/ev49_obj_12.png" alt="원">
+                        </p>
+                        <p class="ob ob13">
+                            <img src="img/ev49_obj_13.png" alt="써프라이즈">
+                        </p>
                     </div> <!-- .obj end -->
                 </div> <!-- .ban_left end -->
                 <div class="ban_right">
@@ -159,7 +167,8 @@
             <div id="cont1">
                 <div class="container">
                     <div id="nav">
-                        <ul class="gnb"> <!-- gnb : 메인메뉴라고 통칭함 -->
+                        <ul class="gnb">
+                            <!-- gnb : 메인메뉴라고 통칭함 -->
                             <li><a href="#">마이페이지</a></li>
                             <li><a href="#">카드</a></li>
                             <li><a href="#">금융</a></li>
@@ -179,6 +188,88 @@
                             Event<i class="fas fa-plus"></i>
                         </a>
                     </div> <!-- #nav end -->
+                    <div id="card" class="clearfix">
+                        <div class="card_img">
+                            <h4>추천카드</h4>
+                            <div class="card_banner">
+                                <ul class="clearfix">
+                                    <li>
+                                        <a href="#">
+                                            <img src="img/card01.png" alt="카드1">
+                                            <em>국내외 전 가맹점 0.7%</em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="img/card02.png" alt="카드2">
+                                            <em>SK텔레콤 2천~1만5천</em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="img/card03.png" alt="카드3">
+                                            <em>온라인 쇼핑/마트 주중</em>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div> <!-- .card_banner end -->
+                            <div class="card_link">
+                                <ul class="clearfix">
+                                    <li><a href="#">카드발급조회</a></li>
+                                    <li><a href="#">카드사용등록</a></li>
+                                    <li><a href="#">분실도난</a></li>
+                                    <li><a href="#">카드비밀번호 등록/변경</a></li>
+                                </ul>
+                            </div> <!-- .card_link end -->
+                            <a href="#" class="cardmore-btn ir">추천카드</a>
+                        </div> <!-- card_img end -->
+                        <div class="card_desc">
+                            <dl>
+                                <dt>원하는 365 언제나!</dt>
+                                <dd class="cd1">
+                                    이전달, 지출증가 <br>
+                                    쉽고 편리하게 대출을 받을 수 있을까
+                                </dd>
+                                <dd class="cd2">
+                                    <ul>
+                                        <li><a href="#">단기카드대출</a></li>
+                                        <li><a href="#">장기카드대출</a></li>
+                                        <li><a href="#">일부결제금액이월 약정</a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div> <!-- card_desc end -->
+                    </div> <!-- #card end -->
+                    <div id="event" class="clearfix">
+                        <div class="event_box1">
+                            <div class="eb_banner1">
+                                <p class="eb_desc">원하는 정보와 쌓이는 혜택</p>
+                                <h4 class="eb_tit">웹 회원가입</h4>
+                            </div> <!-- eb_banner1 end -->
+                            <div class="eb_banner2">
+                                <p class="eb_desc">유용한 정보를 미리 준비하세요!</p>
+                                <h4 class="eb_tit">해외 이용 가이드</h4>
+                            </div> <!-- eb_banner2 end -->
+                            <div class="eb_banner3">
+                                <p class="eb_desc">특별한 혜택을 누리세요</p>
+                                <h4 class="eb_tit">VIP Service</h4>
+                            </div> <!-- eb_banner3 end -->
+                        </div> <!-- .event_box1 end -->
+                        <div class="event_box2">
+                            <div class="eb_banner4">
+                                <div class="eb_icon"></div> <!-- .eb_icon end -->
+                                <div class="eb_slider">
+                                    <!-- 슬릭 usage 복붙 -->
+                                    <div class="your-class">
+                                        <div>your content</div>
+                                        <div>your content</div>
+                                        <div>your content</div>
+                                    </div>
+                                </div> <!-- .eb_slider end -->
+                            </div> <!-- .eb_banner4 end -->
+                        </div> <!-- .event_box2 end -->
+                        <div class="event_box3">box3</div> <!-- .event_box3 end -->
+                    </div> <!-- #event end -->
                 </div> <!-- .container end -->
             </div> <!-- #cont1 end -->
         </div> <!-- #contents end -->
@@ -188,8 +279,13 @@
     </div> <!-- #wrap end -->
 
 
+
+
     <!-- 💛제이쿼리,자바스크립트 -->
-    <script src="js/main.js"></script> <!-- 외부 js연결 -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> <!-- 제이쿼리cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- slick js cdn -->
+    <script src="js/main.js"></script> <!-- 외부 js연결 (✔ 제일 아래쪽에 작성) -->
 
 </body>
 

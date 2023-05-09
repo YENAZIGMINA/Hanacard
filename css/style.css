@@ -111,6 +111,12 @@ font-family: 'Noto Sans KR', sans-serif; */
 .ban_left .ob.ob11 { /* 바람2 */
     top: 220px; left: 490px;
 }
+.ban_left .ob.ob12 { /* 원 */
+    top: 110px; left: 450px;
+}
+.ban_left .ob.ob13 { /* 써프라이즈 */
+    top: 164px; left: 464px;
+}
 
 .ban_left .ob.ob1 { /* 구름1 */
     animation: guleom 3s 0.3s linear infinite both;
@@ -159,6 +165,13 @@ font-family: 'Noto Sans KR', sans-serif; */
     animation: wind 2s 3.3s both linear infinite;
     transform-origin: left top;
 }
+.ban_left .ob.ob12 { /* 원 */
+    animation: rotate 3s linear infinite;
+}
+.ban_left .ob.ob13 { /* 써프라이즈 */
+    animation: wind 3s 4s both;
+    transform-origin: left center;
+}
 
 @keyframes guleom {
     0% {transform: translateX(-10px);}
@@ -198,6 +211,12 @@ font-family: 'Noto Sans KR', sans-serif; */
     20% {transform: scale(1); opacity: 1;}
     100% {transform: scale(1); opacity: 1;}
 }
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+
+}
+
 
 .ban_right {
     position: absolute;
@@ -293,6 +312,7 @@ font-family: 'Noto Sans KR', sans-serif; */
 }
 
 /* 💛.contents */
+/* nav */
 #nav {
     font-family: 'Hana2.0 B'; 
     background-color: #fff;
@@ -379,3 +399,154 @@ font-family: 'Noto Sans KR', sans-serif; */
 #nav .gnb_event i {
     padding-left: 1px;
 }
+
+/* card */
+#card {padding-top: 60px;}
+#card .card_img {
+    float: left;
+    width: 50%; height: 285px;
+    background-color: #fff;
+    box-sizing: border-box; /* 패딩잡기전 w50% 잡아놓은영역 깨지지 않도록 */
+    padding: 18px 47px 0;
+    position: relative;
+}
+#card .card_desc {
+    float: left;
+    width: 50%; height: 285px;
+    background-color: #eaebef;
+}
+
+.card_img h4 {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 11px;
+}
+.card_img .card_banner {}
+.card_img .card_banner ul {}
+.card_img .card_banner ul li {
+    float: left;
+    width: 146px;
+    text-align: center;
+    margin-right: 30px;
+}
+.card_img .card_banner ul li:last-child {margin-right: 0;}
+.card_img .card_banner ul li a {}
+.card_img .card_banner ul li a img {
+    width: 100%;
+}
+.card_img .card_banner ul li a em {
+    display: block;
+    padding-top: 8px;
+    font-size: 14px;
+}
+
+.card_img .card_link {margin-top: 30px;}
+.card_img .card_link ul {}
+.card_img .card_link ul li {
+    float: left;
+    margin-right: 11px;
+}
+.card_img .card_link ul li:last-child {margin-right: 0;}
+.card_img .card_link ul li a {
+    display: block;
+    padding: 10px 11px;
+    border: 1px solid #e8e8e8;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.card_img .card_link ul li a:hover {
+    border-color: #666;
+    color: #00907f;
+}
+
+.card_img .cardmore-btn {
+    position: absolute;
+    top: 68px; right: -31px; left: auto;
+    /* ir효과에서 적용되어있는 left 효과없애기 auto */
+    width: 31px; height: 144px;
+    background: url(../img/btn_card_v01.png);
+}
+
+.card_desc {
+    text-align: center;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+.card_desc dl dt {font-size: 16px;}
+.card_desc dl dd {
+    font-size: 15px;
+    color: #777;
+    font-weight: 500;
+}
+.card_desc dl dd.cd1 {
+    font-size: 23px;
+    margin: 20px 0 35px;
+}
+.card_desc dl dd.cd1::before {
+    content: '"';
+    color: #00907f;
+}
+.card_desc dl dd.cd1::after {
+    content: '"';
+    color: #00907f;
+}
+.card_desc dl dd.cd2 {}
+.card_desc dl dd.cd2 ul {}
+.card_desc dl dd.cd2 ul li {
+    display: inline;
+    margin-right: 5px;
+}
+.card_desc dl dd.cd2 ul li:last-child {margin-right: 0;}
+.card_desc dl dd.cd2 ul li a {
+    display: inline-block;
+    /* 부모가 인라인인데 블럭처리하면 다시 한줄로 세워지기 때문에 인라인블럭 */
+    background-color: #fff;
+    padding: 8px 20px;
+    transition: 0.3s;
+    border: 1px solid #fff;
+    /* hover했을때 딸깍 사이즈달라지는 것 방지하기 위해 선 줌 */
+    border-radius: 3px;
+}
+.card_desc dl dd.cd2 ul li a:hover {
+    border: 1px solid #bbb;
+}
+
+/* event */
+#event {
+    text-align: center;
+    color: #fff;
+    margin-top: 10px;
+}
+#event>div {
+    float: left;
+}
+/* event_box1 */
+#event .event_box1 {}
+#event .event_box1 .eb_desc {
+    font-size: 16px; font-weight: 300;
+}
+#event .event_box1 .eb_tit {
+    font-size: 20px;
+}
+#event .event_box1>div {
+    width: 300px; height: 188px;
+    padding-top: 110px;
+    box-sizing: border-box;
+}
+#event .event_box1 .eb_banner1 {
+    background: #01937f url(../img/event_icon1.png) no-repeat center top 25px; /* bg 위치값 top 25px 은 탑기준에서 25px떨어진 위치값 적용가능 */
+}
+#event .event_box1 .eb_banner2 {
+    background: #766e9c url(../img/event_icon2.png) no-repeat center top 25px;
+}
+#event .event_box1 .eb_banner3 {
+    background: #43587d url(../img/event_icon3.png) no-repeat center top 25px;
+}
+
+/* event_box2 */
+#event .event_box2 {
+    width: 300px;
+}
+
+/* event_box3 */
+#event .event_box3 {}
