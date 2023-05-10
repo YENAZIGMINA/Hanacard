@@ -543,10 +543,128 @@ font-family: 'Noto Sans KR', sans-serif; */
     background: #43587d url(../img/event_icon3.png) no-repeat center top 25px;
 }
 
+
 /* event_box2 */
 #event .event_box2 {
-    width: 300px;
+    width: 600px; height: 376px;
+    background-color: #fff;
+    position: relative;
 }
+.event_box2 .eb_icon {
+    position: absolute;
+    top: 60px; left: 60px;
+    z-index: 20;
+}
+.event_box2 .eb_icon ul {overflow: hidden;}
+.event_box2 .eb_icon ul li {
+    float: left;
+}
+.event_box2 .eb_icon ul li a {
+    font-size: 14px;
+    display: block;
+    padding: 3px 12px;
+}
+.event_box2 .eb_icon ul li.ei1 {
+    margin-right: 8px;
+}
+.event_box2 .eb_icon ul li.ei1 a {
+    background-color: #00907f;
+    border: 1px solid #00907f;
+    border-radius: 3px;
+    color: #fff;
+    transition: 0.3s;
+}
+.event_box2 .eb_icon ul li.ei1 a:hover {
+    background-color: #007668;
+    border-color: #007668;
+}
+.event_box2 .eb_icon ul li.ei1 a i {}
+.event_box2 .eb_icon ul li.ei2 {}
+.event_box2 .eb_icon ul li.ei2 a {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+.event_box2 .eb_icon ul li.ei2 a:hover {
+    border-color: #000;
+    color: #000;
+}
+
+
+#event .event_box2 .slick-dots {
+    position: absolute;
+    top: 50px; right: 50px;
+}
+#event .event_box2 .slick-dots li {
+    float: left; /* 부모가 position 잡혀있으면 깨진 것 처리 필요없음 */
+    margin-right: 8px;
+}
+#event .event_box2 .slick-dots li button {
+    /* ❗인라인 요소지만 공간을 인식하는 태그 : img, button */
+    border: 0;
+    font-size: 0; line-height: 0;
+    width: 8px; height: 8px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#event .event_box2 .slick-dots li.slick-active button {
+    background-color: #d75e7e;
+}
+/* 재생-정지 버튼 */
+#event .event_box2 .page_act {
+    font-size: 0; 
+    /* 글자기재하는 이유는 접근성때문에, 화면에보이면 안되니 사이즈0 */
+    position: absolute;
+    top: 61px; right: 90px;
+}
+#event .event_box2 .page_act .btn_stop {
+    display: none; /* a태그니까 영역잡기위해 블럭변경 */
+    width: 8px; height: 8px;
+    background: url(../img/btn_banner_stop.png) no-repeat;
+}
+#event .event_box2 .page_act .btn_play {
+    display: block;
+    width: 8px; height: 8px;
+    background: url(../img/btn_banner_play.png) no-repeat;
+}
+#event .event_box2 .page_act.on .btn_stop {display: block;}
+#event .event_box2 .page_act.on .btn_play {display: none;}
+
+
+/* eb_banner5 */
+#event .event_box2 .eb_banner5 {
+    width: 600px; height: 188px;
+    position: relative;
+    background: #8cc7e9;
+}
+#event .event_box2 .eb_banner5 h4 {
+    position: absolute;
+    top: 0; left: 0;
+    font-family: 'Hana2.0 B';
+    color: #000;
+    font-size: 20px;
+}
+#event .event_box2 .eb_banner5 ul.money {
+    overflow: hidden;
+    padding-left: 0; padding-top: 0;
+}
+#event .event_box2 .eb_banner5 ul.money li {
+    float: left;
+}
+#event .event_box2 .eb_banner5 ul.money li a {
+    display: block;
+    background-color: #fff;
+    padding: 9px 10px;
+    font-size: 14px;
+    border-radius: 3px;
+    width: 134px;
+}
+#event .event_box2 .eb_banner5 ul.money li.w100 {}
+#event .event_box2 .eb_banner5 ul.money li.w100 a {}
+#event .event_box2 .eb_banner5 a.point {}
+
 
 /* event_box3 */
 #event .event_box3 {}
