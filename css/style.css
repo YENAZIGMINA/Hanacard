@@ -15,7 +15,7 @@ font-family: 'Noto Sans KR', sans-serif; */
 
 /* contents layout */
 #cont1 {height: 940px; background-color: #f5f6f8;}
-
+#cont2 {height: 555px; background-color: #efefef;}
 
 
 /* 💙중심영역 */
@@ -637,21 +637,23 @@ font-family: 'Noto Sans KR', sans-serif; */
 #event .event_box2 .eb_banner5 {
     width: 600px; height: 188px;
     position: relative;
-    background: #8cc7e9;
+    background: #8cc7e9 url(../img/event_icon4.png) no-repeat;
+    background-position: 138px 58px;
 }
 #event .event_box2 .eb_banner5 h4 {
     position: absolute;
-    top: 0; left: 0;
+    top: 70px; left: 60px;
     font-family: 'Hana2.0 B';
     color: #000;
     font-size: 20px;
 }
 #event .event_box2 .eb_banner5 ul.money {
     overflow: hidden;
-    padding-left: 0; padding-top: 0;
+    padding-left: 257px; padding-top: 50px;
 }
 #event .event_box2 .eb_banner5 ul.money li {
     float: left;
+    margin-right: 8px; margin-bottom: 15px;
 }
 #event .event_box2 .eb_banner5 ul.money li a {
     display: block;
@@ -660,11 +662,148 @@ font-family: 'Noto Sans KR', sans-serif; */
     font-size: 14px;
     border-radius: 3px;
     width: 134px;
+    transition: 0.3s;
+}
+#event .event_box2 .eb_banner5 ul.money li a:hover {
+    background-color: #f4f4f4;
 }
 #event .event_box2 .eb_banner5 ul.money li.w100 {}
-#event .event_box2 .eb_banner5 ul.money li.w100 a {}
-#event .event_box2 .eb_banner5 a.point {}
+#event .event_box2 .eb_banner5 ul.money li.w100 a {
+    width: 100px;
+}
+#event .event_box2 .eb_banner5 a.point {
+    position: absolute;
+    top: 35px; left: 57px;
+    background-color: #43587d;
+    color: #fff;
+    font-size: 13px;
+    padding: 3px 12px;
+    border-radius: 3px;
+}
 
 
 /* event_box3 */
-#event .event_box3 {}
+#event .event_box3 {
+    color: #fff;
+    width: 300px; height: 564px;
+    background-color: #d7567e;
+    position: relative;
+}
+#event .event_box3 h4 {
+    font-size: 24px;
+    padding: 40px 0;
+}
+#event .event_box3 .eb_slider2 {}
+#event .event_box3 img {display: inline;} /* event에서 text-aline-center 유전받아서 display: inline; 가능 */
+#event .event_box3 .slick-dots {
+    margin-left: 30px;
+}
+#event .event_box3 .slick-dots li {
+    margin-right: 8px;
+    display: inline; /* 옆으로 정렬 */
+}
+#event .event_box3 .slick-dots li:last-child {margin-right: 0;}
+#event .event_box3 .slick-dots li button {
+    font-size: 0; line-height: 0;
+    border: 0;
+    width: 8px; height: 8px;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 50%;
+    transition: 0.3s;
+}
+#event .event_box3 .slick-dots li.slick-active button {
+    background-color: rgba(255,255,255,1);
+}
+#event .event_box3 .pagn_act {
+    position: absolute;
+    top: 393px; left: 129px;
+}
+#event .event_box3 .pagn_act .btn_stop {
+    display: none;
+    width: 8px; height: 8px;
+    background: url(../img/btn_banner_stop.png) no-repeat;
+    font-size: 0;
+}
+#event .event_box3 .pagn_act .btn_play {
+    display: block;
+    width: 8px; height: 8px;
+    background: url(../img/btn_banner_play.png) no-repeat;
+    font-size: 0;
+}
+#event .event_box3 .pagn_act.on .btn_stop {display: block;}
+#event .event_box3 .pagn_act.on .btn_play {display: none;}
+#event .event_box3 p {
+    font-size: 16px;
+    padding: 35px 0 15px;
+}
+#event .event_box3 .es2_btn {
+    background-color: #fff;
+    display: inline-block;
+    padding: 10px 50px;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+/* 💛cont2 */
+/* #life */
+#life {height: 330px;}
+#life .life_menu {
+    position: absolute;
+    top: 60px; left: 50%;
+    z-index: 10;
+}
+#life .life_menu ul {}
+#life .life_menu ul li {
+    float: left;
+    margin-right: 45px;
+}
+#life .life_menu ul li:last-child {margin-right: 0;}
+#life .life_menu ul li a {
+    display: block;
+    width: 100px; height: 100px;
+    background-color: #ddd;
+    border-radius: 50%;
+    text-align: center; line-height: 100px;
+    font-size: 17px;
+    transition: 0.3s;
+}
+#life .life_menu ul li a:hover {
+    background-color: #cc3d63;
+    color: #fff;
+}
+
+#life .life_style {width: 100%;}
+#life .life_style li {
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0; /* w100% h100%랑 같은말 */
+    transition: 0.3s;
+}
+#life .life_style li:nth-child(1) {
+    background: url(../img/mc_service_bg02.png) no-repeat;
+}
+#life .life_style li:nth-child(2) {
+    background: url(../img/mc_service_bg03.png) no-repeat;
+}
+#life .life_style li:nth-child(3) {
+    background: url(../img/mc_service_bg04.png) no-repeat;
+}
+#life .life_style li:nth-child(4) {
+    background: url(../img/mc_service_bg05.png) no-repeat;
+}
+#life .life_style li .text {}
+#life .life_style li .text a {
+    width: 50%;
+    display: block;
+    padding: 60px 0 0 30px;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    font-weight: 600;
+}
+#life .life_style li .text a em {
+    font-size: 18px;
+    display: block;
+    letter-spacing: 1px;
+    color: #000;
+    font-weight:normal;
+}
