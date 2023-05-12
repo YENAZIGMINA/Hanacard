@@ -11,11 +11,22 @@ font-family: 'Noto Sans KR', sans-serif; */
 #header {}
 #banner {background-color: #a0d1ee; height: 470px;}
 #contents {}
+#footer {}
 
 
 /* contents layout */
 #cont1 {height: 940px; background-color: #f5f6f8;}
 #cont2 {height: 555px; background-color: #efefef;}
+
+/* footer layout */
+#footer_notice {
+    height: 71px; 
+    line-height: 71px; overflow: hidden; 
+    /* 라인헤이트때문에 푸터영역 깨져서 overflow: hidden로 영역외 공간은 숨김처리 */
+    background-color: #fff;
+    border-bottom: 1px solid #e6e6e6;
+}
+#footer_info {height: 242px; background-color: #f7f8f9;}
 
 
 /* 💙중심영역 */
@@ -746,7 +757,10 @@ font-family: 'Noto Sans KR', sans-serif; */
 
 /* 💛cont2 */
 /* #life */
-#life {height: 330px;}
+#life {
+    position: relative;
+    height: 330px;
+}
 #life .life_menu {
     position: absolute;
     top: 60px; left: 50%;
@@ -772,7 +786,7 @@ font-family: 'Noto Sans KR', sans-serif; */
     color: #fff;
 }
 
-#life .life_style {width: 100%;}
+#life .life_style {height: 100%;}
 #life .life_style li {
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0; /* w100% h100%랑 같은말 */
@@ -806,4 +820,209 @@ font-family: 'Noto Sans KR', sans-serif; */
     letter-spacing: 1px;
     color: #000;
     font-weight:normal;
+}
+
+#life .life_btn {
+    position: absolute;
+    bottom: 66px; left: 0;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+}
+#life .life_btn ul {overflow: hidden;}
+#life .life_btn ul li {
+    float: left;
+    width: 16.666%;
+    position: relative;
+}
+#life .life_btn ul li::after {
+    content: '';
+    position: absolute;
+    top: 19px; left: 0;
+    width: 1px; height: 13px;
+    background-color: #ccc;
+}
+#life .life_btn ul li:first-child::after {
+    display: none;
+}
+#life .life_btn ul li a {
+    color: #333;
+    display: block;
+    padding: 13px 10px;
+    font-size: 16px;
+}
+
+#app {}
+#app .app_left {
+    float: left;
+    width: 49%;
+    background: #fff url(../img/mc_service_banner01_img.jpg) no-repeat 30px 40px;
+    height: 200px;
+}
+#app .app_right {
+    float: right;
+    width: 50%;
+    background: #ddd;
+    height: 200px;
+}
+
+#app .app_left {}
+#app .app_left ul {
+    padding-left: 267px; padding-top: 39px;
+}
+#app .app_left ul li {
+    float: left;
+    width: 48px; height: 48px;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+#app .app_left ul li a {}
+#app .app_left ul li a img {
+    width: 100%;
+}
+
+#app .al_text {
+    padding-left: 267px;
+    margin-top: 12px;
+}
+#app .al_text a {
+    font-size: 16px;
+    color: #666;
+}
+#app .al_text a strong{
+    display: block;
+    font-size: 20px;
+    color: #000;
+    line-height: 34px;
+    font-weight: bold;
+}
+
+#app .app_right {}
+#app .app_right>div {
+    float: left;
+    height: 200px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
+/* #app .app_right>div a {
+    color: #fff;
+    display: block;
+    padding: 200px;
+    box-sizing: border-box;
+} */
+#app .app_right .ar_ban1 {
+    width: 25%;
+    background: #2f4359 url(../img/service_ban01.png) no-repeat center 50px;
+    padding-top: 130px; /* 글자를 밀때는 패딩을 이용해서 */
+    box-sizing: border-box; 
+    /* 패딩주면 높이값+패딩값 영역만큼 늘어나게 되는데 박스사이징으로 영역포함시킴 */
+}
+#app .app_right .ar_ban2 {
+    width: 25%;
+    background: #00907f url(../img/service_ban02.png) no-repeat center 50px;
+    padding-top: 130px;
+    box-sizing: border-box; 
+}
+#app .app_right .ar_ban3 {
+    width: 50%;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 20px 20px 19px;
+}
+#app .app_right .ar_ban3 .ban3_text {
+    font-size: 15px;
+    color: #666;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 20px 30px 75px;
+    background: url(../img/service_ban03.png) no-repeat;
+    background-position: 14px 36px;
+    text-align: left;
+}
+#app .app_right .ar_ban3 .ban3_text h5 {
+    font-size: 20px;
+    color: #000;
+    padding-bottom: 5px;
+}
+#app .app_right .ar_ban3 .ban3_slide {
+    color: #666;
+    font-size: 15px;
+    padding-top: 10px;
+}
+
+
+/* 💛#footer */
+.notice {position: relative;}
+.notice h3 {
+    float: left;
+    font-size: 15px;
+    margin-right: 30px;
+}
+.notice h3 i {
+    font-size: 10px;
+    border: 1px solid #ccc;
+    padding: 4px;
+    border-radius: 2px;
+    vertical-align: 2px;
+}
+.notice ul {float: left;}
+.notice ul li {
+    display: inline-block; /* 옆으로 정렬 */
+    width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 50px;
+    position: relative;
+    padding-left: 10px;
+}
+.notice ul li::after {
+    content: '';
+    position: absolute;
+    top: 35px; left: 0;
+    width: 3px; height: 3px;
+    border-radius: 50%;
+    background-color: #333;
+}
+.notice ul li a {
+    font-size: 15px;
+    color: #666;
+}
+.notice .notice_btn {
+    position: absolute;
+    right: 0; top: 18px;
+    border: 1px solid #e6e6e6;
+    font-size: 14px;
+    border-radius: 3px;
+    padding: 3px 20px;
+    line-height: 25px; /* 조상값 영향받아서 다시 적용 */
+    transition: 0.3s;
+}
+.notice .notice_btn:hover {
+    border-color: #000;
+}
+
+.info {}
+.info a {color: #666;}
+.info a:hover {color: #00907f;}
+
+.info .f_nav {}
+.info .f_nav li {
+    display: inline-block;
+    padding: 10px;
+}
+.info .f_nav li:first-child {padding-left: 0;}
+.info .f_nav li a {}
+.info .f_nav li a strong {
+    color: #494949;
+    font-weight: bold;
+}
+.info .f_nav li:hover a strong {color: #00907f;}
+.info .f_address {
+    margin-top: 20px;
+}
+.info .f_address span {
+    margin-right: 15px;
 }
