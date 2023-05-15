@@ -1026,3 +1026,56 @@ font-family: 'Noto Sans KR', sans-serif; */
 .info .f_address span {
     margin-right: 15px;
 }
+
+
+.info .f_icon {margin-top: 20px;}
+.info .f_icon ul {}
+.info .f_icon ul li {
+    float: left;
+    padding: 5px 30px 5px 0;
+}
+.f_icon ul li a {}
+
+.f_icon ul li.fi1 {
+    background: url(../img/mark01.png) no-repeat;
+    padding-left: 45px;
+}
+.f_icon ul li.fi2 {
+    background: url(../img/mark02.png) no-repeat;
+    padding-left: 45px;
+}
+.f_icon ul li.fi3 {
+    background: url(../img/mark03.png) no-repeat;
+    padding-left: 45px;
+}
+.f_icon ul li.fi4 {
+    background: url(../img/mark04.png) no-repeat;
+    padding-left: 60px;
+}
+.f_icon ul li.fi5 {
+    background: url(../img/mark05.png) no-repeat;
+    padding-left: 45px;
+}
+
+.info .family_site {
+    position: absolute;
+    top: 20px; right: 0;
+    font-size: 14px;
+    border: 1px solid #e6e6e6;
+    padding: 7px 20px;
+}
+.info .family_site a {}
+.info .family_site a i {
+    padding-left: 20px;
+}
+
+.info .sns_icon {
+    position: absolute;
+    top: 65px; right: 0;
+}
+.info .sns_icon ul {}
+.info .sns_icon ul li {
+    display: inline;
+}
+.info .sns_icon ul li a {}
+.info .sns_icon ul li a img {}
